@@ -265,7 +265,7 @@ padding: 6px 14px;
 
 .offer-section {
 background: rgba(230, 230, 230, 1);
-padding: 50px 80px 40px 80px;
+padding: 50px 80px 40px 75px;
 text-align: center;
 font-family: "Lexend", sans-serif;
 box-sizing: border-box;
@@ -278,7 +278,6 @@ font-weight: 600;
 text-align: center;
 font-family: "Lexend";
 margin-bottom: 50px;
-margin-left: 40px;
 }
 
 
@@ -491,7 +490,7 @@ padding: 25px 20px;
 }
 
 .offer-heading {
-font-size: 26px;
+font-size: 40px;
 text-align: center;
 }
 
@@ -527,7 +526,8 @@ line-height: 1.5;
 }
 
 .offer-heading {
-font-size: 22px;
+font-size: 32px;
+align-items: center;
 }
 }
 
