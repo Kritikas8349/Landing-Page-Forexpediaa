@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import "./ForexpediaaHero.css";
 import { FaChevronDown } from "react-icons/fa";
+import {
+  FaRegThumbsUp,
+  FaShare,
+  FaRegFlag,
+  FaChevronLeft,
+  FaCircle,
+  FaBars,
+} from "react-icons/fa";
+
 
 
 const ForexpediaaHero = () => {
@@ -86,142 +95,222 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
 
 
 
-<section className="howitworks-section">
-<h2 className="howitworks-title">How it works</h2>
+<section className="how-section">
+      {/* Left Section */}
+      <div className="how-left">
+        <h2 className="how-title">How it works</h2>
 
-<div className="howitworks-container">
+        <div className="how-card oval1">
+          <img src="forex1.png" alt="Join Experience" className="how-img" />
+          <div>
+            <h3>Join the Experience</h3>
+            <p>
+              Start your free trial and access real market insights guided by
+              certified professionals.
+            </p>
+          </div>
+        </div>
 
-  
-  <div className="howitworks-card">
-    <div className="number-circle">1</div>
-    <img src="img1.png" alt="Join the Experience" className="howitworks-img" />
-    <div className="howitworks-text">
-      <h3>Join the Experience</h3>
-      <p>
-        Start your free trial and access real market insights guided by
-        certified professionals.
-      </p>
-    </div>
-  </div>
+        <div className="how-card">
+          <img src="forex2.png" alt="Data Analysis" className="how-img" />
+          <div>
+            <h3>Learn from Data-Driven Analysis</h3>
+            <p>
+              Our analysts interpret market movements, central bank updates
+              (like FOMC), and global trends — so you can trade with clarity.
+            </p>
+          </div>
+        </div>
 
-  
-  <div className="howitworks-card">
-    <div className="number-circle">2</div>
-    <img src="img2.png" alt="Learn from Data-Driven Analysis" className="howitworks-img" />
-    <div className="howitworks-text">
-      <h3>Learn from Data-Driven Analysis</h3>
-      <p>
-        Our analysts interpret market movements, central bank updates
-        (like FOMC), and global trends — so you can trade with clarity.
-      </p>
-    </div>
-  </div>
+        <div className="how-card oval">
+          <img src="forex3.png" alt="Trade Smarter" className="how-img" />
+          <div>
+            <h3>Trade Smarter, Not Harder</h3>
+            <p>
+              Apply structured strategies built from professional frameworks and
+              proven methods.
+            </p>
+          </div>
+        </div>
+      </div>
 
-  
-  <div className="howitworks-card">
-    <div className="number-circle">3</div>
-    <img src="img3.png" alt="Trade Smarter, Not Harder" className="howitworks-img" />
-    <div className="howitworks-text">
-      <h3>Trade Smarter, Not Harder</h3>
-      <p>
-        Apply structured strategies built from professional frameworks and
-        proven methods.
-      </p>
-    </div>
-  </div>
-</div>
+      {/* Right Section - Phone */}
+      <div className="how-right">
+        <div className="phone-frame">
+          {/* Top Camera Circle */}
+          <div className="phone-camera"></div>
 
-<img src="earth.png" alt="earth" className="earth-img" />
-</section>
+          <h3 className="testimonials-title">Testimonials</h3>
+
+          <div className="testimonials-scroll">
+            {/* Review 1 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss4.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Saboor Ahmad Yousufi</h4>
+                    <p className="country">US · 1 review</p>
+                  </div>
+                </div>
+                <span className="date">Jul 26, 2025</span>
+              </div>
+              <p className="review-title">Awesome customer service</p>
+              <p className="review-text">Awesome customer service</p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+            {/* Review 2 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss3.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Abdul Khaliq</h4>
+                    <p className="country">KW · 1 review</p>
+                  </div>
+                </div>
+                <span className="date">Jul 25, 2025</span>
+              </div>
+              <p className="review-title">Hi siya</p>
+              <p className="review-text">
+                I like your tracking analysis. It is very good.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+            {/* Review 3 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss2.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Greg Coles Epic Drummer</h4>
+                    <p className="country">GB · 2 reviews</p>
+                  </div>
+                </div>
+                <span className="date">Aug 04, 2025</span>
+              </div>
+              <p className="review-title">
+                Sanjana was very helpful and honest.
+              </p>
+              <p className="review-text">
+                Sanjana was very helpful and honest.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+            {/* Review 4 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss1.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Zahir Shahl</h4>
+                    <p className="country">AE · 4 reviews</p>
+                  </div>
+                </div>
+                <span className="date">Jul 31, 2025</span>
+              </div>
+              <p className="review-title">
+                It's trusted and good for trading signal
+              </p>
+              <p className="review-text">
+                I work with Mr. Shravan and he provides good signals. I highly
+                recommend Mr. Shravan and Forexpediaa for signals.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+            {/* Review 5 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Sureshbhai Tandel</h4>
+                    <p className="country">AE · 2 reviews</p>
+                  </div>
+                </div>
+                <span className="date">Jul 26, 2025</span>
+              </div>
+              <p className="review-title">
+                I have great experience with Forexpedia...
+              </p>
+              <p className="review-text">
+                They provide good service and proper follow-up. Miss Gracy has
+                been very supportive.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Phone Buttons */}
+          <div className="phone-buttons">
+            <FaChevronLeft className="phone-icon" />
+            <FaCircle className="phone-icon" />
+            <FaBars className="phone-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-
-<section className="feedback-section">
-<h1 className="feedback-title">Traders Feedback</h1>
-<h3 className="feedback-subtitle">
-Traders turned consistent stories that matter
-</h3>
-<p className="feedback-rating">
-Excellent - <span className="stars">★★★★★</span>
-</p>
-
-<div className="feedback-container">
-
-<div className="feedback-card card-small">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Omar A., Abu Dhabi</h4>
-<p>
-“Forexpediaa’s insights actually teach you what drives the market — not just signals but the reasons behind them.”
-</p>
-</div>
-
-<div className="feedback-card card-medium">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Sophie L., London</h4>
-<p>
-“Their approach feels professional. You can tell it’s backed by people who’ve studied markets deeply — not random calls.”
-</p>
-</div>
-
-<div className="feedback-card card-large">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Elena K., Athens</h4>
-<p>
-“The analytics are spot-on. I’ve compared their insights with live market trends, and they’re consistently reliable. What stands out is how they break down complex data into understandable insights — it’s not just numbers but real explanations of why the market moves. I’ve grown far more confident in my own strategies because of their clear, evidence-based approach.”
-</p>
-</div>
-
-
-<div className="feedback-card card-large">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Daniel W., Toronto</h4>
-<p>
-“I used to trade emotionally, jumping in and out of positions without a real plan. Forexpediaa completely changed that. Their data-driven approach and clear explanations helped me understand market behavior and timing. Now, I trade with patience, strategy, and confidence — and my results have improved drastically.”
-</p>
-</div>
-
-<div className="feedback-card card-medium">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Fatima R., Dubai</h4>
-<p>
-“The dashboard and reports feel like something institutional traders would use. Super impressed.”
-</p>
-</div>
-
-<div className="feedback-card card-medium">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Khalid H., Bahrain</h4>
-<p>
-“Before Forexpediaa, I was overwhelmed by complex charts and jargon. Their explanations made technical analysis actually make sense. I can finally identify trends confidently and make smarter trading decisions.”
-</p>
-</div>
-
-
-<div className="feedback-card card-small">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>David M., USA</h4>
-<p>
-“The live insights and economic breakdowns on Forexpediaa helped me understand why markets move, not just when. That perspective made me more consistent and disciplined in my trades.”
-</p>
-</div>
-
-<div className="feedback-card card-large">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Ahmed R., Dubai</h4>
-<p>
-“I subscribed to the premium plan thinking I’d just get daily updates — but what I got was a full education. Forexpediaa’s structured content and market reports are miles ahead of free Telegram channels.”
-</p>
-</div>
-
-<div className="feedback-card card-small">
-<p className="stars">★★★★★ <span className="verified">✔ verified</span></p>
-<h4>Noah T., New York</h4>
-<p>
-“From currency correlations to macroeconomic news, Forexpediaa covers everything. It’s not just a signal site — it’s a proper learning platform for serious traders.”
-</p>
-</div>
-</div>
-</section>
 
 
 

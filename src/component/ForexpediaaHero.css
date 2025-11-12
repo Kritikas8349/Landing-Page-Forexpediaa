@@ -71,7 +71,7 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 
 
 .hero-subtext {
-font-family: "Koh Santepheap";
+font-family: "Lexend";
 font-weight: 300;
 font-size: 24px;
 margin-bottom: 40px;
@@ -84,9 +84,9 @@ background: rgba(3, 126, 238, 1);
 color: #ffffff;
 border: none;
 border-radius: 58px;
-width: 350px;
+width: 380px;
 height: 52px;
-padding: 11px 24px;
+padding: 11px 28px;
 cursor: pointer;
 transition: all 0.3s ease;
 font-size: 22px;
@@ -97,6 +97,7 @@ display: inline-flex;
 align-items: center;
 justify-content: center;
 text-align: center;
+white-space: nowrap;
 }
 
 .hero-btn:hover {
@@ -245,17 +246,18 @@ padding: 7px 16px;
 
 @media (max-width: 360px) {
 .hero-heading {
-font-size: 26px;
+font-size: 24px;
 }
 .hero-subtext {
 font-size: 14px;
 }
 .hero-btn {
-width: 170px;
+width: 180px;
 height: 38px;
 font-size: 10px;
 font-weight: bold;
-padding: 6px 14px;
+padding: 6px 20px;
+white-space: nowrap;
 }
 }
 
@@ -267,8 +269,8 @@ padding: 6px 14px;
 
 
 .offer-section {
-background: rgba(230, 230, 230, 1);
-padding: 50px 80px 40px 75px;
+background: #ebefee;
+padding: 50px 80px 100px 75px;
 text-align: center;
 font-family: "Lexend", sans-serif;
 box-sizing: border-box;
@@ -353,11 +355,11 @@ transition: color 0.3s ease, transform 0.3s ease;
 
 
 .offer-text {
-font-family: "Koh Santepheap", sans-serif;
+font-family: "Lexend";
 font-weight: 300;
 font-size: 16px;
 line-height: 150%;
-color: rgba(20, 38, 62, 0.6);
+color: #5f5f5f;
 text-align: left;
 transition: color 0.3s ease;
 }
@@ -535,371 +537,354 @@ align-items: center;
 }
 
 
-
-.howitworks-section {
-position: relative;
-background-color: rgba(230, 230, 230, 1);
-padding: 100px 80px 160px 80px; 
-font-family: "Lexend", sans-serif;
-overflow: hidden;
+/* ---------- MAIN SECTION ---------- */
+.how-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 100px;
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-.howitworks-title {
-font-size: 40px;
-color: rgba(21, 39, 62, 1);
-font-weight: 600;
-text-align: center;
-font-family: "Lexend";
-margin-bottom: 60px;
+/* -------- LEFT SECTION -------- */
+.how-left {
+  flex: 1.2;
+  margin-top: -40px;
+  min-width: 320px;
 }
 
-.howitworks-container {
-position: relative;
-display: flex;
-justify-content: center;
-gap: 40px;
-flex-wrap: wrap;
-z-index: 2;
+.how-title {
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  margin-bottom: 50px;
 }
 
-.howitworks-card {
-position: relative;
-width: 320px;
-background-color: #ffffff;
-border-radius: 20px;
-overflow: visible; 
-transition: all 0.35s ease;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-z-index: 2;
+/* Cards */
+.how-card {
+  display: flex;
+  align-items: center;
+  background: #ebefee;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  transition: all 0.3s ease;
 }
 
-.howitworks-card:hover {
-transform: translateY(-6px);
-box-shadow:
-0 15px 25px rgba(3, 126, 238, 0.35); 
+.how-card.oval1 {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
-
-.number-circle {
-position: absolute;
-top: -35px; 
-left: 0;
-background-color: rgba(3, 126, 238, 1);
-color: rgba(21, 39, 62, 1);
-width: 70px;
-height: 70px;
-border-radius: 50%;
-font-weight: 700;
-font-size: 38px;
-display: flex;
-align-items: center;
-justify-content: center;
-z-index: 3;
-box-shadow: 0 6px 15px rgba(0, 81, 255, 0.25);
+.how-card.oval {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
-.howitworks-img {
-width: 100%;
-height: 190px;
-object-fit: cover;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
+.how-card:hover h3 {
+  color: #007bff;
 }
 
-.howitworks-text {
-padding: 20px;
+.how-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  flex-shrink: 0;
 }
 
-.howitworks-text h3 {
-font-size: 18px;
-font-weight: 700;
-color: #0a1a33;
-margin-bottom: 10px;
+.how-card h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 8px;
+  font-weight: 800;
 }
 
-.howitworks-text p {
-font-size: 14px;
-color: #555e68;
-line-height: 1.6;
+.how-card p {
+  color: #5f5f5f;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-
-.earth-img {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 550px;
-opacity: 0.7;
-z-index: 1; 
-pointer-events: none;
-mix-blend-mode: multiply;
+/* -------- RIGHT SECTION -------- */
+.how-right {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
 }
 
+.phone-frame {
+  background: #fafafa;
+  width: 340px;
+  height: 610px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+  border: 1px solid black;
+}
 
+/* -------- TESTIMONIALS -------- */
+.testimonials-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.testimonials-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 1;
+  padding-right: 10px;
+}
+
+.testimonials-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* -------- REVIEW DESIGN -------- */
+.testimonial {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px 0;
+}
+
+.testimonial:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c2340;
+  margin-bottom: 3px;
+}
+
+.country,
+.date {
+  font-size: 12px;
+  color: #777;
+}
+
+.stars-img {
+  width: 90px;
+  margin: 8px 0;
+}
+
+.review-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c2340;
+}
+
+.review-text {
+  font-size: 13.5px;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.review-footer span {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.review-footer span:hover {
+  color: blue;
+}
+
+/* ---------- PHONE DETAILS ---------- */
+.phone-camera {
+  width: 60px;
+  height: 8px;
+  background: #000;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.phone-icon {
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.phone-icon:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Laptop screens */
 @media (max-width: 1200px) {
-.howitworks-card {
-width: 300px;
-}
-.earth-img {
-width: 450px;
-}
-}
-
-@media (max-width: 900px) {
-.howitworks-container {
-justify-content: center;
-}
-.howitworks-card {
-width: 80%;
-max-width: 400px;
-}
-.number-circle {
-top: -30px;
-left: 15px;
-}
-.earth-img {
-width: 400px;
-}
+  .how-section {
+    gap: 40px;
+    padding: 50px 80px;
+  }
+  .how-title {
+    font-size: 34px;
+  }
+  .how-card h3 {
+    font-size: 18px;
+  }
 }
 
-@media (max-width: 600px) {
-.howitworks-section {
-padding: 80px 20px 120px 20px;
-}
-.howitworks-title {
-font-size: 32px;
-}
-.earth-img {
-width: 320px;
-bottom: 0;
-}
-}
-
-
-
-
-.feedback-section {
-font-family: "Lexend", sans-serif;
-background-color: #e7e7e7;
-text-align: center;
-padding: 60px 60px 0px 60px;
-}
-
-
-.feedback-title {
-font-size: 40px;
-font-weight: 700;
-color: rgba(21, 39, 62, 1);
-font-family: "Lexend";
-}
-
-.feedback-subtitle {
-font-size: 26px;
-color: rgba(0, 0, 0, 1);
-font-weight: 400;
-margin-top: -10px;
-font-family: "Lexend";
-}
-
-
-.feedback-rating {
-font-weight: 600;
-font-size: 1.8rem;
-margin-bottom: 40px;
-color: rgba(0, 0, 0, 1);
-font-family: "Lexend";
-}
-
-.stars {
-color: #007bff;
-font-size: 1.2rem;
-}
-
-
-.feedback-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-max-width: 1100px;
-margin: 0 auto;
-height: 600px;
-overflow-y: scroll;
-scrollbar-width: none;
-}
-
-.feedback-container::-webkit-scrollbar {
-display: none;
-}
-
-
-.feedback-card {
-background-color: #ffffff;
-border-radius: 16px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-padding: 20px;
-text-align: left;
-transition: transform 0.2s ease;
-}
-
-/* .feedback-card:hover {
-transform: translateY(-4px);
-} */
-
-
-.card-small {
-height: 200px;
-}
-.card-medium {
-height: 260px;
-}
-.card-large {
-height: 320px;
-}
-
-
-.feedback-card:nth-child(4) {
-transform: translateY(-120px);
-}
-.feedback-card:nth-child(5) {
-transform: translateY(-60px);
-}
-.feedback-card:nth-child(7),
-.feedback-card:nth-child(8) {
-transform: translateY(-120px);
-}
-.feedback-card:nth-child(9) {
-transform: translateY(-60px);
-}
-
-
-.feedback-card h4 {
-font-weight: 700;
-font-size: 0.95rem;
-margin: 8px 0;
-color: black;
-}
-.feedback-card p {
-font-size: 0.9rem;
-color: #333;
-}
-.feedback-card p.stars {
-color: #007bff;
-}
-.verified {
-font-size: 0.8rem;
-color: #000;
-margin-left: 6px;
-}
-
-
-
-
-@media (max-width: 1200px) {
-.feedback-container {
-max-width: 950px;
-gap: 20px;
-}
-.feedback-title {
-font-size: 36px;
-}
-.feedback-subtitle {
-font-size: 22px;
-}
-}
-
-
+/* Tablets */
 @media (max-width: 992px) {
-.feedback-container {
-grid-template-columns: repeat(2, 1fr);
-height: auto;
-overflow-y: visible;
+  .how-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 60px;
+    gap: 50px;
+  }
+
+  .how-left,
+  .how-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .how-card {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .phone-frame {
+    width: 300px;
+    height: 550px;
+    text-align: start;
+  }
 }
 
-.feedback-section {
-padding: 50px 40px;
-}
-
-.feedback-card {
-height: auto;
-}
-
-.feedback-card:nth-child(4),
-.feedback-card:nth-child(5),
-.feedback-card:nth-child(7),
-.feedback-card:nth-child(8),
-.feedback-card:nth-child(9) {
-transform: none;
-}
-
-.feedback-title {
-font-size: 34px;
-}
-.feedback-subtitle {
-font-size: 20px;
-}
-.feedback-rating {
-font-size: 1.5rem;
-}
-}
-
-
+/* Mobile screens */
 @media (max-width: 768px) {
-.feedback-container {
-grid-template-columns: 1fr;
-gap: 20px;
+  .how-section {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  .how-title {
+    font-size: 28px;
+  }
+
+  .how-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .how-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .phone-frame {
+    width: 260px;
+    height: 500px;
+    text-align: start;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
 }
 
-.feedback-section {
-padding: 40px 30px;
-}
-
-.feedback-title {
-font-size: 30px;
-}
-.feedback-subtitle {
-font-size: 18px;
-}
-.feedback-rating {
-font-size: 1.3rem;
-}
-
-.feedback-card {
-padding: 18px;
-}
-}
-
-
+/* Small phones */
 @media (max-width: 480px) {
-.feedback-section {
-padding: 30px 20px;
+  .how-section {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .how-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  .how-card h3 {
+    font-size: 16px;
+  }
+
+  .how-card p {
+    font-size: 13px;
+  }
+
+  .phone-frame {
+    width: 230px;
+    height: 460px;
+    text-align: start;
+  }
 }
 
-.feedback-title {
-font-size: 26px;
-}
-.feedback-subtitle {
-font-size: 16px;
-}
-.feedback-rating {
-font-size: 1.1rem;
-margin-bottom: 25px;
-}
 
-.feedback-card {
-padding: 16px;
-border-radius: 12px;
-}
 
-.feedback-card h4 {
-font-size: 0.9rem;
-}
-.feedback-card p {
-font-size: 0.85rem;
-}
-.stars {
-font-size: 1rem;
-}
-}
+
+
+
+
+
+
 
 
 
