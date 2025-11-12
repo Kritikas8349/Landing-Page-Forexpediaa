@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavbarForex.css";
+import { Link } from "react-router-dom";
 
 
 const NavbarForex = () => {
@@ -10,8 +11,14 @@ const NavbarForex = () => {
           <img src="FPlogo.png" alt="Forexpediaa Logo" className="navbar-logo" />
         </div>
         <div className="navbar-right">
-          <button className="contact-btn">Contact Us</button>
-        </div>
+  <Link to="/about">
+    <button className="nav-btn">About Us</button>
+  </Link>
+  <Link to="/contact">
+    <button className="nav-btn">Contact Us</button>
+  </Link>
+</div>
+
       </div>
     </nav>
   );

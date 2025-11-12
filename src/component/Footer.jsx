@@ -1,5 +1,12 @@
 import React from "react";
-import { FaTwitter, FaFacebookF, FaInstagram} from "react-icons/fa";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedinIn,
+  FaXTwitter, // For the X (Twitter) icon
+} from "react-icons/fa6";
 import { FiMail, FiGlobe } from "react-icons/fi";
 import "./Footer.css";
 
@@ -13,28 +20,38 @@ const Footer = () => {
         </div>
 
         <div className="fp-social">
-          <a href="#" aria-label="twitter" className="fp-social-icon"><FaTwitter /></a>
-          <a href="#" aria-label="facebook" className="fp-social-icon"><FaFacebookF /></a>
-          <a href="#" aria-label="instagram" className="fp-social-icon"><FaInstagram /></a>
+          <a href="https://x.com/ForexPediaa" aria-label="x-twitter" className="fp-social-icon">
+            <FaXTwitter />
+          </a>
+          <a href="https://www.facebook.com/people/Forexpediaa/61570471215586/?mibextid=wwXIfr" aria-label="facebook" className="fp-social-icon">
+            <FaFacebookF />
+          </a>
+          <a href="https://www.instagram.com/forexpediaa_official/?igsh=ZTlhaDljY3A2MHk2#" aria-label="instagram" className="fp-social-icon">
+            <FaInstagram />
+          </a>
+          <a href="https://www.youtube.com/@forexpediaa" aria-label="youtube" className="fp-social-icon">
+            <FaYoutube />
+          </a>
+          <a href="https://www.linkedin.com/company/105704301/admin/dashboard/" aria-label="linkedin" className="fp-social-icon">
+            <FaLinkedinIn />
+          </a>
         </div>
 
         <div className="fp-links-line">
           <nav className="fp-nav">
-            <a href="#">Follow us:   Facebook</a>
+            <a href="https://www.facebook.com/people/Forexpediaa/61570471215586/?mibextid=wwXIfr">Follow us:   Facebook</a>
             <span>|</span>
-            <a href="#">Twitter</a>
+            <a href="https://www.linkedin.com/company/105704301/admin/dashboard/">LinkedIn</a>
             <span>|</span>
-            <a href="#">LinkedIn</a>
+            <a href="https://www.instagram.com/forexpediaa_official/?igsh=ZTlhaDljY3A2MHk2#">Instagram</a>
             <span>|</span>
-            <a href="#">Instagram</a>
-            <span>|</span>
-            <a href="#">YouTube</a>
+            <a href="https://www.youtube.com/@forexpediaa">YouTube</a>
           </nav>
 
           <nav className="fp-subnav">
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <span>|</span>
-            <a href="#">Terms &amp; Conditions</a>
+            <a href="/terms-conditions">Terms &amp; Conditions</a>
             <span>|</span>
             <a href="#">Risk Disclaimer</a>
           </nav>
@@ -43,9 +60,15 @@ const Footer = () => {
 
       <div className="fp-contact-row">
         <div className="fp-contact-left">
-          <a className="fp-contact-link" href="mailto:support@forexpediaa.com">
-            <FiMail className="fp-contact-icon" /> support@forexpediaa.com
-          </a>
+        <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=support@forexpediaa.com"
+  target="_blank"
+  rel="noreferrer"
+  className="fp-contact-link"
+>
+  <FiMail className="fp-contact-icon" /> support@forexpediaa.com
+</a>
+
         </div>
         <div className="fp-contact-right">
           <a className="fp-contact-link" href="https://www.forexpediaa.com" target="_blank" rel="noreferrer">
@@ -58,8 +81,8 @@ const Footer = () => {
 
       <div className="fp-bottom">
         <div className="fp-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms and Condition</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-conditions">Terms and Condition</a>
         </div>
 
         <div className="fp-disclaimer">

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Koh+Santepheap:wght@300;400;500;600;700&display=swap');
+
+.aboutus-page {
+  font-family: "Lexend", sans-serif;
+  color: #14233c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.about-hero {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.about-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    313.3deg,
+    rgba(81, 173, 229, 0.5) 11.15%,
+    rgba(21, 39, 63, 0.6) 58.27%
+  );
+  z-index: 2;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: start;
+  color: #fff;
+  padding: 0 10px 0 20px;
+}
+
+.about-hero-title {
+  font-size: 64px;
+  font-weight: 600;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.about-hero-subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+/* ===== CONTENT ===== */
+.about-content {
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.about-container p,
+.about-container ul {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-intro {
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.about-intro span {
+  font-weight: 600;
+  color: #037eee;
+}
+
+/* ===== SECTION ===== */
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #051c3b;
+  margin-bottom: 15px;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.about-section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #037eee;
+  font-size: 20px;
+  top: -2px;
+}
+
+/* ===== VALUES GRID ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.value-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h3 {
+  color: #037eee;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== WHY CHOOSE ===== */
+.why-list li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* ===== CTA ===== */
+.about-cta {
+  text-align: center;
+  background: #ebefee;
+  color: #fff;
+  border-radius: 20px;
+  padding: 60px 30px;
+  margin-top: 80px;
+}
+
+.about-cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.about-cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-btn1 {
+  background: #037eee;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-family: "Koh Santepheap";
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn1:hover {
+  background-color: #0bc10b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+
+/* --- Large Tablets & Small Laptops (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .about-hero-title {
+    font-size: 48px;
+  }
+  .about-hero-subtitle {
+    font-size: 20px;
+  }
+  .about-content {
+    padding: 60px 8%;
+  }
+  .about-section h2 {
+    font-size: 24px;
+  }
+}
+
+/* --- Tablets (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 65vh;
+  }
+
+  .about-hero-title {
+    font-size: 40px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .about-content {
+    padding: 50px 6%;
+  }
+
+  .about-section {
+    margin-bottom: 45px;
+  }
+
+  .about-section h2 {
+    font-size: 22px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .about-cta {
+    padding: 50px 20px;
+  }
+
+  .about-cta h2 {
+    font-size: 28px;
+  }
+
+  .about-cta p {
+    font-size: 16px;
+  }
+}
+
+/* --- Mobile Devices (max-width: 576px) --- */
+@media (max-width: 576px) {
+  .about-hero {
+    height: 55vh;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .about-hero-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .about-hero-subtitle {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .about-content {
+    padding: 40px 5%;
+  }
+
+  .about-intro {
+    font-size: 16px;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+  .about-section ul li {
+    font-size: 15px;
+  }
+
+  .value-card {
+    padding: 18px;
+  }
+
+  .value-card h3 {
+    font-size: 16px;
+  }
+
+  .about-cta {
+    padding: 40px 15px;
+    border-radius: 12px;
+  }
+
+  .about-cta h2 {
+    font-size: 24px;
+  }
+
+  .about-cta p {
+    font-size: 15px;
+  }
+
+  .hero-btn1 {
+    font-size: 16px;
+    padding: 10px 26px;
+  }
+}
+
+/* --- Extra Small Screens (max-width: 400px) --- */
+@media (max-width: 400px) {
+  .about-hero-title {
+    font-size: 26px;
+  }
+  .about-hero-subtitle {
+    font-size: 14px;
+  }
+  .about-cta h2 {
+    font-size: 20px;
+  }
+  .hero-btn1 {
+    font-size: 15px;
+    padding: 8px 22px;
+  }
+}

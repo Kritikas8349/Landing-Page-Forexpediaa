@@ -8,6 +8,7 @@ import {
   FaChevronLeft,
   FaCircle,
   FaBars,
+  FaStar ,
 } from "react-icons/fa";
 
 
@@ -28,14 +29,16 @@ return (
 
   <div className="hero-content">
     <h1 className="hero-heading">
-      Trading & Forex Experts <br /> <span>for Financial Growth</span>
+      Smarter Trades, Certified Insights<br /> <span> Real Expertise.</span>
     </h1>
     <p className="hero-subtext">
-      Trade confidently with analysts who understand global markets, FOMC <br />
-      policy shifts, and real trading behavior. <br />
-      We turn data into opportunity with professional-grade precision.
+      Trade confidently with analysts who understand global markets, <br />FOMC
+      policy shifts, and real trading behavior.
     </p>
-    <button className="hero-btn">Claim Your Free Trial Access</button>
+    <button className="hero-btn">Start Your 5 Days Demo Now</button>
+    <p className="hero-subtext">
+      We turn data into opportunity with professional-grade <br /> precision.
+    </p>
   </div>
 </section>
 
@@ -141,9 +144,254 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
           <div className="phone-camera"></div>
 
           <h3 className="testimonials-title">Testimonials</h3>
+          <h3 className="testimonial-title">Forexpediaa Analysts' Feedback</h3>
 
           <div className="testimonials-scroll">
             {/* Review 1 */}
+
+
+            
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="d.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Dheeraj Parwani</h4>
+                    <p className="country">CL · 1 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 31, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+              I got the service and I am happy....
+              </p>
+              
+              <p className="review-text">
+              I got the service and I am happy with the service and experience. Nice support from Sidhant Jain. Keep doing good work.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="es.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Ebin Sunny</h4>
+                    <p className="country">AE · 7 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 30, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+              The signals are good and accurate.
+              </p>
+              
+              <p className="review-text">
+              The signals are good and accurate. I have been working since a Month now, Mr. Vijay is delivering the accuracy of around 70%.The whole experience has been very professional.☺️☺️☺️
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="tk.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Tertius Kruger</h4>
+                    <p className="country">ZA · 1 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 30, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+              I have started working with Forexpediaa....
+              </p>
+              
+              <p className="review-text">
+              I have started working with Forexpediaa and I am very satisfied with the experience.
+              I am getting profitable results with technical analysis and guidance.
+              The whole experience has been very professional.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+            
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ms.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Manoj Singh</h4>
+                    <p className="country">AE · 1 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 25, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+                Hello Team.
+              </p>
+              
+              <p className="review-text">
+              I have working with this company from last 3 months SANJANA she is very supportive hard working with good signal accuracy and especially she is helping and Co-operative person the company is one of the best and the way she handling account is the best lucky to b working with he..
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="t.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Taha Hassan</h4>
+                    <p className="country">US · 2 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 24, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+                ask Serena she is the best.
+              </p>
+              
+              <p className="review-text">
+              Serena. I have dealt with her a long time. Extremely helpful human. Ask Serena any questions she will help.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+
+            {/* Review 4 */}
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="ss1.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Zahir Shahl</h4>
+                    <p className="country">AE · 4 reviews</p>
+                  </div>
+                </div>
+                <span className="date">Jul 31, 2025</span>
+              </div>
+                            <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+                It's trusted and good for trading signal
+              </p>
+              
+              <p className="review-text">
+                I work with Mr. Shravan and he provides good signals. I highly
+                recommend Mr. Shravan and Forexpediaa for signals.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
             <div className="testimonial">
               <div className="review-header">
                 <div className="user-info">
@@ -155,7 +403,13 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
                 </div>
                 <span className="date">Jul 26, 2025</span>
               </div>
+                            <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
               <p className="review-title">Awesome customer service</p>
+              
               <p className="review-text">Awesome customer service</p>
 
               <div className="review-footer">
@@ -183,7 +437,13 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
                 </div>
                 <span className="date">Jul 25, 2025</span>
               </div>
+                            <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
               <p className="review-title">Hi siya</p>
+              
               <p className="review-text">
                 I like your tracking analysis. It is very good.
               </p>
@@ -213,44 +473,17 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
                 </div>
                 <span className="date">Aug 04, 2025</span>
               </div>
+                            <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
               <p className="review-title">
                 Sanjana was very helpful and honest.
               </p>
+              
               <p className="review-text">
                 Sanjana was very helpful and honest.
-              </p>
-
-              <div className="review-footer">
-                <span>
-                  <FaRegThumbsUp /> Useful
-                </span>
-                <span>
-                  <FaShare /> Share
-                </span>
-                <span>
-                  <FaRegFlag /> Report
-                </span>
-              </div>
-            </div>
-
-            {/* Review 4 */}
-            <div className="testimonial">
-              <div className="review-header">
-                <div className="user-info">
-                  <img src="ss1.png" alt="User" className="user-img" />
-                  <div>
-                    <h4>Zahir Shahl</h4>
-                    <p className="country">AE · 4 reviews</p>
-                  </div>
-                </div>
-                <span className="date">Jul 31, 2025</span>
-              </div>
-              <p className="review-title">
-                It's trusted and good for trading signal
-              </p>
-              <p className="review-text">
-                I work with Mr. Shravan and he provides good signals. I highly
-                recommend Mr. Shravan and Forexpediaa for signals.
               </p>
 
               <div className="review-footer">
@@ -278,9 +511,15 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
                 </div>
                 <span className="date">Jul 26, 2025</span>
               </div>
+                            <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
               <p className="review-title">
                 I have great experience with Forexpedia...
               </p>
+              
               <p className="review-text">
                 They provide good service and proper follow-up. Miss Gracy has
                 been very supportive.
@@ -305,6 +544,87 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
             <FaChevronLeft className="phone-icon" />
             <FaCircle className="phone-icon" />
             <FaBars className="phone-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section className="market-section">
+      {/* LEFT SIDE */}
+      <div className="market-left">
+        <p className="market-welcome">
+          welcome to <span className="highlight">forexpediaa</span>
+        </p>
+
+        <h2 className="market-title">Forexpediaa Market Insight Plans</h2>
+
+        <p className="market-desc">
+          Whether you're a new trader or managing multiple portfolios,
+          Forexpediaa offers customized access levels built for precision,
+          learning, and real-time decision making.
+        </p>
+
+        <div className="market-stats">
+          <div className="stat">
+            <p>Powered by institutional-grade feeds updated every 500ms</p>
+            <h1>99%+</h1>
+          </div>
+          <div className="stat">
+            <p>Rated #1 in expert-led forex intelligence for 2025</p>
+            <h1>#1</h1>
+          </div>
+          <div className="stat">
+            <p>Analyst-guided demo & live accounts launched this year</p>
+            <h1>3k+</h1>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="market-right">
+        {/* 1 */}
+        <div className="plan">
+          <img src="chooseus-1.png" alt="Essential Insight Plan" />
+          <div className="plan-info">
+            <h4>Essential Insight Plan</h4>
+            <p>
+              Daily certified analysis and live FOMC updates for traders seeking
+              reliable, real-time insights. <br />
+              Best for beginners and mid-level traders.
+            </p>
+          </div>
+        </div>
+
+        <div className="divider"></div>
+
+        {/* 2 */}
+        <div className="plan">
+          <img src="chooseus-2.png" alt="Professional Analyst Plan" />
+          <div className="plan-info">
+            <h4>Professional Analyst Plan</h4>
+            <p>
+              Advanced market data, CMT-level charts, and personal analyst
+              support for serious traders. <br />
+              Includes premium tools and priority access.
+            </p>
+          </div>
+        </div>
+
+        <div className="divider"></div>
+
+        {/* 3 */}
+        <div className="plan">
+          <img src="chooseus-3.png" alt="Institutional Plan" />
+          <div className="plan-info">
+            <h4>Institutional Plan</h4>
+            <p>
+              Comprehensive analytics, early FOMC coverage, and full portfolio
+              reports for professionals. <br />
+              Tailored for funds and high-net-worth investors.
+            </p>
           </div>
         </div>
       </div>
@@ -424,13 +744,12 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
   <div className="circle circle-right"></div>
 
   <h2 className="certified-heading">
-    Experience Certified Trading Insights <br /> Backed by Real Expertise
+    Tired of flashy claims that sound too good to be true?
   </h2>
+  <button className="certified-btn">Claim 5 Days Trail</button>
   <p className="certified-text">
-    Trade with confidence, guided by certified analysts and global market data. <br />
-    Start your journey with our free trial today.
+    We never promise gauranteed profits - only transparent signals with clear SL & TP.
   </p>
-  <button className="certified-btn">Start My Free Trial</button>
 </div>
 </section>
 

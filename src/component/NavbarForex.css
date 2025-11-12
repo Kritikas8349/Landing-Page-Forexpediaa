@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-
+/* ---------- NAV CONTAINER ---------- */
 .navbar-container {
   width: 100%;
   max-width: 1500px;
@@ -21,9 +21,10 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  flex-wrap: nowrap;
 }
 
-
+/* ---------- LEFT SIDE ---------- */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -37,40 +38,48 @@
   transition: all 0.3s ease;
 }
 
-
-.navbar-right .contact-btn {
-  background: rgba(3, 126, 238, 1);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 40px;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: "Koh Santepheap";
-  text-align: center;
+/* ---------- RIGHT SIDE ---------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
 }
 
-.navbar-right .contact-btn:hover {
+/* ---------- BUTTONS ---------- */
+.nav-btn {
+  background-color: #037eee;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Koh Santepheap";
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
   background-color: rgb(11, 193, 11);
   transform: scale(1.03);
 }
 
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
 
+/* --- Large Laptops --- */
 @media (max-width: 1200px) {
   .navbar-container {
-    padding: 20px 40px;
+    padding: 18px 40px;
   }
   .navbar-logo {
     width: 240px;
   }
-  .navbar-right .contact-btn {
-    font-size: 20px;
-    padding: 10px 34px;
-  }
 }
 
+/* --- Tablets Landscape --- */
 @media (max-width: 992px) {
   .navbar-container {
     padding: 16px 30px;
@@ -78,64 +87,82 @@
   .navbar-logo {
     width: 200px;
   }
-  .navbar-right .contact-btn {
-    font-size: 18px;
-    padding: 9px 28px;
+  .nav-btn {
+    font-size: 13px;
+    padding: 7px 16px;
   }
 }
 
-
+/* --- Tablets Portrait / Small Laptops --- */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 14px 24px;
-  }
-  .navbar-logo {
-    width: 170px;
-  }
-  .navbar-right .contact-btn {
-    font-size: 16px;
-    padding: 8px 24px;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .navbar-container {
     padding: 12px 20px;
+    gap: 10px;
   }
   .navbar-logo {
-    width: 150px;
+    width: 160px;
   }
-  .navbar-right .contact-btn {
-    font-size: 15px;
-    padding: 7px 20px;
+  .navbar-right {
+    gap: 8px;
+  }
+  .nav-btn {
+    font-size: 13px;
+    padding: 6px 14px;
   }
 }
 
+/* --- Mobiles --- */
+@media (max-width: 600px) {
+  .navbar-forex {
+    height: auto;
+    padding: 40px 0;
+  }
 
-@media (max-width: 420px) {
   .navbar-container {
+    flex-wrap: nowrap; /* keep in one line */
+    justify-content: space-between;
     padding: 10px 16px;
   }
+
   .navbar-logo {
     width: 130px;
   }
-  .navbar-right .contact-btn {
-    font-size: 14px;
-    padding: 6px 18px;
+
+  .navbar-right {
+    gap: 6px;
+  }
+
+  .nav-btn {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
 
-
-@media (max-width: 350px) {
-  .navbar-container {
-    padding: 8px 14px;
-  }
+/* --- Very Small Screens --- */
+@media (max-width: 420px) {
   .navbar-logo {
     width: 110px;
   }
-  .navbar-right .contact-btn {
-    font-size: 13px;
-    padding: 5px 16px;
+  .nav-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  .navbar-right {
+    gap: 5px;
+  }
+}
+
+/* --- Ultra Small Screens (Tiny Phones) --- */
+@media (max-width: 350px) {
+  .navbar-container {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .navbar-logo {
+    width: 95px;
+  }
+  .nav-btn {
+    font-size: 10px;
+    padding: 4px 8px;
   }
 }

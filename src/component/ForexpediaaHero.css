@@ -19,7 +19,8 @@ margin-top: 100px;
 overflow: hidden;
 display: flex;
 align-items: center;
-justify-content: flex-start;
+justify-content: center;
+text-align: center;
 }
 
 
@@ -52,17 +53,16 @@ z-index: 2;
 .hero-content {
 position: relative;
 z-index: 3;
-max-width: 888px;
-margin-left: 49px;
+width: 100%;
 color: #ffffff;
 font-family: "Lexend";
-margin-top: -80px;
+margin-top: 60px;
 }
 
 
 .hero-heading {
 font-weight: 600;
-font-size: 72px;
+font-size: 70px;
 line-height: 100%;
 color: #ffffff;
 margin-bottom: 20px;
@@ -89,7 +89,7 @@ height: 52px;
 padding: 11px 28px;
 cursor: pointer;
 transition: all 0.3s ease;
-font-size: 22px;
+font-size: 18px;
 font-family: "Koh Santepheap";
 font-weight: 400;
 letter-spacing: 0.5px;
@@ -106,7 +106,7 @@ transform: scale(1.02);
 }
 
 
-@media (max-width: 1600px) {
+/* @media (max-width: 1600px) {
 .hero-content {
 margin-left: 40px;
 max-width: 800px;
@@ -122,7 +122,7 @@ width: 320px;
 height: 50px;
 font-size: 21px;
 }
-}
+} */
 
 
 @media (max-width: 1200px) {
@@ -163,7 +163,7 @@ font-size: 18px;
 .hero-btn {
 width: 260px;
 height: 46px;
-font-size: 18px;
+font-size: 16px;
 padding: 10px 22px;
 }
 }
@@ -191,7 +191,7 @@ margin-bottom: 30px;
 .hero-btn {
 width: 230px;
 height: 44px;
-font-size: 17px;
+font-size: 14px;
 padding: 9px 20px;
 }
 }
@@ -217,7 +217,7 @@ font-size: 16px;
 .hero-btn {
 width: 210px;
 height: 42px;
-font-size: 16px;
+font-size: 12px;
 padding: 8px 18px;
 }
 }
@@ -644,6 +644,16 @@ align-items: center;
   margin-bottom: 10px;
 }
 
+
+.testimonial-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+  margin-top: -8px;
+}
+
 .testimonials-scroll {
   overflow-y: scroll;
   scrollbar-width: none;
@@ -655,6 +665,19 @@ align-items: center;
 .testimonials-scroll::-webkit-scrollbar {
   display: none;
 }
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.star-icon {
+  color: #f4c430; /* gold color */
+  font-size: 14px;
+}
+
 
 /* -------- REVIEW DESIGN -------- */
 .testimonial {
@@ -871,11 +894,273 @@ align-items: center;
   }
 
   .phone-frame {
-    width: 230px;
-    height: 460px;
+    width: 280px;
+    height: 580px;
     text-align: start;
   }
 }
+
+
+
+
+
+
+
+/* ---------- SECTION CONTAINER ---------- */
+.market-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f5f5f5;
+  padding: 60px 100px;
+  font-family: "Lexend", sans-serif;
+  color: #000;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* ---------- LEFT SIDE ---------- */
+.market-left {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.market-welcome {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #1a41ff;
+  font-weight: 600;
+}
+
+.market-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.market-desc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+  max-width: 530px;
+}
+
+/* ---------- STATS ---------- */
+.market-stats .stat {
+  margin-bottom: 15px;
+}
+
+.market-stats .stat p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+
+.market-stats .stat h1 {
+  font-size: 50px;
+  font-weight: 1000;
+  color: #0066ff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.market-right {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.plan {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.plan img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.plan-info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.plan:hover .plan-info h4 {
+  font-size: 22px;
+  color: #0066ff;
+  cursor: pointer;
+}
+
+.plan:hover img {
+  transform: scale(1.03);
+}
+
+.plan-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.divider {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Large Laptops (max 1200px) */
+@media (max-width: 1200px) {
+  .market-section {
+    padding: 50px 60px;
+  }
+
+  .market-title {
+    font-size: 30px;
+  }
+
+  .plan img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Tablets (max 992px) */
+@media (max-width: 992px) {
+  .market-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 40px;
+  }
+
+  .market-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .market-right {
+    border-left: none;
+    border-top: 1px solid #ccc;
+    padding-left: 0;
+    padding-top: 30px;
+    gap: 25px;
+  }
+
+  .plan {
+    gap: 15px;
+  }
+
+  .plan img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .plan-info h4 {
+    font-size: 18px;
+  }
+
+  .plan-info p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .market-section {
+    padding: 40px 25px;
+  }
+
+  .market-title {
+    font-size: 28px;
+  }
+
+  .market-desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .market-stats .stat p {
+    font-size: 14px;
+  }
+
+  .market-stats .stat h1 {
+    font-size: 40px;
+  }
+
+  .plan {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plan img {
+    width: 100%;
+    height: auto;
+  }
+
+  .plan-info h4 {
+    font-size: 18px;
+  }
+}
+
+/* Small Phones (max 480px) */
+@media (max-width: 480px) {
+  .market-section {
+    padding: 30px 20px;
+  }
+
+  .market-title {
+    font-size: 24px;
+  }
+
+  .market-desc {
+    font-size: 13px;
+  }
+
+  .market-stats .stat h1 {
+    font-size: 34px;
+  }
+
+  .plan-info p {
+    font-size: 14px;
+  }
+}
+
+/* Ultra-Small Devices (max 360px) */
+@media (max-width: 360px) {
+  .market-title {
+    font-size: 22px;
+  }
+
+  .market-stats .stat h1 {
+    font-size: 30px;
+  }
+
+  .plan-info h4 {
+    font-size: 16px;
+  }
+
+  .plan-info p {
+    font-size: 13px;
+  }
+}
+
 
 
 
@@ -891,7 +1176,7 @@ align-items: center;
 .faq-section {
 position: relative;
 font-family: "Lexend", sans-serif;
-background: rgba(230, 230, 230, 1);
+background: #ebefee;
 padding: 60px 0 180px 0;
 text-align: center;
 overflow: hidden;
@@ -971,6 +1256,13 @@ align-items: center;
 font-weight: 500;
 font-size: 20px;
 color: rgba(20, 38, 62, 1);
+transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* When FAQ is open */
+.faq-item.active .faq-question {
+  font-size: 22px;   /* increase size when open */
+  color: #007bff;    /* optional: also change color */
 }
 
 
@@ -1099,7 +1391,14 @@ height: 60%;
 }
 
 .faq-question {
-font-size: 16px;
+  font-size: 12px;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* When FAQ is open */
+.faq-item.active .faq-question {
+  font-size: 15px;   /* increase size when open */
+  color: #007bff;    /* optional: also change color */
 }
 
 .arrow {
@@ -1122,8 +1421,12 @@ bottom: 10px;
 }
 }
 
+
+
+
+
 .certified-section {
-  background-color: rgba(230, 230, 230, 1);
+  background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1132,7 +1435,7 @@ bottom: 10px;
 
 .certified-card {
   position: relative;
-  background: white;
+  background: #ebefee;
   border-radius: 20px;
   width: 100%;
   max-width: 1200px;
@@ -1209,7 +1512,6 @@ bottom: 10px;
   height: 250px;
   transform: rotate(180deg);
 }
-
 @media (max-width: 1024px) {
   .certified-card {
     padding: 60px 40px;
@@ -1222,8 +1524,8 @@ bottom: 10px;
   }
   .circle-left,
   .circle-right {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -1242,16 +1544,16 @@ bottom: 10px;
     padding: 10px 25px;
   }
   .circle-left {
-    top: -60px;
-    left: -80px;
-    width: 150px;
-    height: 150px;
+    top: -30px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
   }
   .circle-right {
-    bottom: -60px;
-    right: -80px;
-    width: 150px;
-    height: 150px;
+    bottom: -30px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -1269,16 +1571,20 @@ bottom: 10px;
     font-size: 16px;
     padding: 8px 20px;
   }
+
+  /* ✅ Circles stay visible on small screens */
   .circle-left {
-    top: -80px;
-    left: -100px;
-    width: 120px;
-    height: 120px;
+    top: -40px;
+    left: -30px;
+    width: 140px;
+    height: 140px;
   }
+
   .circle-right {
-    bottom: -80px;
-    right: -100px;
-    width: 120px;
-    height: 120px;
+    bottom: -40px;
+    right: -30px;
+    width: 140px;
+    height: 140px;
+    transform: rotate(180deg);
   }
 }
