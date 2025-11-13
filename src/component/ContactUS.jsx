@@ -83,7 +83,7 @@ Message: ${formData.message}`;
           <input
             type="tel"
             name="phone"
-            placeholder="Phone Number (with country code)"
+            placeholder="Whatsapp Number"
             className="form-input"
             value={formData.phone}
             onChange={handleChange}
