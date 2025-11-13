@@ -149,6 +149,11 @@
     border-radius: 8px;
     background-color: transparent;
   }
+
+  .nav-btn:hover {
+    background-color: transparent;
+    transform: scale(1.03);
+  }
 }
 
 /* --- Mobiles --- */
@@ -165,6 +170,10 @@
     font-size: 16px;
     background-color: transparent;
   }
+  .nav-btn:hover {
+    background-color: transparent;
+    transform: scale(1.03);
+  }
 }
 
 /* --- Very Small Screens --- */
@@ -176,6 +185,10 @@
     font-size: 16px;
     padding: 8px 0;
     background-color: transparent;
+  }
+  .nav-btn:hover {
+    background-color: transparent;
+    transform: scale(1.03);
   }
 }
 
@@ -190,5 +203,9 @@
   .nav-btn {
     font-size: 14px;
     background-color: transparent;
+  }
+  .nav-btn:hover {
+    background-color: transparent;
+    transform: scale(1.03);
   }
 }
