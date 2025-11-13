@@ -101,6 +101,9 @@
     font-size: 13px;
     padding: 7px 16px;
   }
+  .nav-btn:hover {
+    background-color: transparent;
+  }
 }
 
 /* --- Tablets Portrait / Small Laptops --- */
@@ -152,7 +155,6 @@
 
   .nav-btn:hover {
     background-color: transparent;
-    transform: scale(1.03);
   }
 }
 
@@ -172,7 +174,6 @@
   }
   .nav-btn:hover {
     background-color: transparent;
-    transform: scale(1.03);
   }
 }
 
@@ -188,7 +189,6 @@
   }
   .nav-btn:hover {
     background-color: transparent;
-    transform: scale(1.03);
   }
 }
 
@@ -206,6 +206,5 @@
   }
   .nav-btn:hover {
     background-color: transparent;
-    transform: scale(1.03);
   }
 }
