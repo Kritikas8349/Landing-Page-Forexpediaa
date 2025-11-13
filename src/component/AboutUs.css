@@ -43,7 +43,7 @@
   z-index: 3;
   text-align: center;
   color: #fff;
-  padding: 0 10px 0 20px;
+  padding: 0 10px 0 10px;
 }
 
 .about-hero-title {
@@ -255,9 +255,9 @@
 /* --- Mobile Devices (max-width: 576px) --- */
 @media (max-width: 576px) {
   .about-hero {
-    height: 55vh;
+    /* height: 55vh; */
     text-align: center;
-    padding: 0 15px;
+    /* padding: 0 15px; */
   }
 
   .about-hero-title {

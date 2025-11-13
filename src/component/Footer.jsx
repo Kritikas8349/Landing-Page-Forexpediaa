@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaTwitter,
   FaFacebookF,
   FaInstagram,
   FaYoutube,
@@ -9,6 +8,7 @@ import {
 } from "react-icons/fa6";
 import { FiMail, FiGlobe } from "react-icons/fi";
 import "./Footer.css";
+import { Link } from "react-router-dom"
 
 
 const Footer = () => {
@@ -49,11 +49,9 @@ const Footer = () => {
           </nav>
 
           <nav className="fp-subnav">
-            <a href="/privacy-policy">Privacy Policy</a>
+          <Link to="/privacy-policy">Privacy Policy</Link>
             <span>|</span>
-            <a href="/terms-conditions">Terms &amp; Conditions</a>
-            <span>|</span>
-            <a href="#">Risk Disclaimer</a>
+            <Link to="/terms-conditions">Terms & Conditions</Link>
           </nav>
         </div>
       </div>
@@ -80,10 +78,10 @@ const Footer = () => {
       <div className="fp-sep" />
 
       <div className="fp-bottom">
-        <div className="fp-bottom-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-conditions">Terms and Condition</a>
-        </div>
+      <div className="fp-bottom-links">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link to="/terms-conditions">Terms and Condition</Link>
+      </div>
 
         <div className="fp-disclaimer">
           <p>

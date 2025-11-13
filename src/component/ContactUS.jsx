@@ -18,7 +18,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     // ✅ Your WhatsApp number (country code, no "+" or spaces)
-    const phoneNumber = ""; // change this to your WhatsApp number
+    const phoneNumber = "9691043783"; // change this to your WhatsApp number
 
     // ✅ Construct WhatsApp message
     const textMessage = `Hello, I’m ${formData.name} (${formData.email}).
