@@ -10,6 +10,7 @@ import {
   FaBars,
   FaStar ,
 } from "react-icons/fa";
+import ContactForm from "./ContactForm";
 
 
 
@@ -19,6 +20,12 @@ const [openIndex, setOpenIndex] = useState(null);
 const toggleFAQ = (index) => {
 setOpenIndex(openIndex === index ? null : index);
 };
+
+const [isFormOpen, setIsFormOpen] = useState(false);
+
+const openForm = () => setIsFormOpen(true);
+const closeForm = () => setIsFormOpen(false);
+
 
 return (
 <div>
@@ -35,7 +42,8 @@ return (
       Trade confidently with analysts who understand global markets, <br />FOMC
       policy shifts, and real trading behavior.
     </p>
-    <button className="hero-btn">Start Your 5 Days Demo Now</button>
+    <button className="hero-btn" onClick={openForm}>Start Your 5 Days Demo Now</button>
+
     <p className="hero-subtext">
       We turn data into opportunity with professional-grade <br /> precision.
     </p>
@@ -148,48 +156,6 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
 
           <div className="testimonials-scroll">
             {/* Review 1 */}
-
-
-            
-            <div className="testimonial">
-              <div className="review-header">
-                <div className="user-info">
-                  <img src="d.png" alt="User" className="user-img" />
-                  <div>
-                    <h4>Dheeraj Parwani</h4>
-                    <p className="country">CL · 1 reviews</p>
-                  </div>
-                </div>
-                <span className="date">July 31, 2025</span>
-              </div>
-              <div className="star-rating">
-          {[...Array(5)].map((_, i) => (
-            <FaStar key={i} className="star-icon" />
-          ))}
-        </div>
-              <p className="review-title">
-              I got the service and I am happy....
-              </p>
-              
-              <p className="review-text">
-              I got the service and I am happy with the service and experience. Nice support from Sidhant Jain. Keep doing good work.
-              </p>
-
-              <div className="review-footer">
-                <span>
-                  <FaRegThumbsUp /> Useful
-                </span>
-                <span>
-                  <FaShare /> Share
-                </span>
-                <span>
-                  <FaRegFlag /> Report
-                </span>
-              </div>
-            </div>
-
-
-
 
             <div className="testimonial">
               <div className="review-header">
@@ -309,6 +275,48 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
               </div>
             </div>
 
+            
+            <div className="testimonial">
+              <div className="review-header">
+                <div className="user-info">
+                  <img src="d.png" alt="User" className="user-img" />
+                  <div>
+                    <h4>Dheeraj Parwani</h4>
+                    <p className="country">CL · 1 reviews</p>
+                  </div>
+                </div>
+                <span className="date">July 31, 2025</span>
+              </div>
+              <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="star-icon" />
+          ))}
+        </div>
+              <p className="review-title">
+              I got the service and I am happy....
+              </p>
+              
+              <p className="review-text">
+              I got the service and I am happy with the service and experience. Nice support from Sidhant Jain. Keep doing good work.
+              </p>
+
+              <div className="review-footer">
+                <span>
+                  <FaRegThumbsUp /> Useful
+                </span>
+                <span>
+                  <FaShare /> Share
+                </span>
+                <span>
+                  <FaRegFlag /> Report
+                </span>
+              </div>
+            </div>
+
+
+
+
+            
 
 
             <div className="testimonial">
@@ -746,13 +754,14 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
   <h2 className="certified-heading">
     Tired of flashy claims that sound too good to be true?
   </h2>
-  <button className="certified-btn">Claim 5 Days Trail</button>
+  <button className="certified-btn" onClick={openForm}>Claim 5 Days Trail</button>
+
   <p className="certified-text">
     We never promise gauranteed profits - only transparent signals with clear SL & TP.
   </p>
 </div>
 </section>
-
+{isFormOpen && <ContactForm onClose={closeForm} />}
 
 </div>
 );

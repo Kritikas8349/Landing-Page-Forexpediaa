@@ -159,20 +159,128 @@
   transform: translateY(-2px);
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* For large tablets and small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 120px 80px;
+  }
+
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .contact-form {
+    max-width: 420px;
+    padding: 25px 30px 35px 30px;
+  }
+}
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
-    padding: 60px 30px;
+    align-items: center;
+    padding: 120px 60px;
+    gap: 60px;
   }
 
   .contact-left {
     margin-right: 0;
-    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .help-text,
+  .main-heading,
+  .description {
+    text-align: center;
+    text-align: start;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-right {
+    justify-content: center;
+    width: 100%;
   }
 
   .contact-form {
-    max-width: 100%;
-    padding: 35px 25px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* For small tablets and large phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .contact-container {
+    padding: 100px 30px;
+  }
+
+  .main-heading {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: start;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .contact-form {
+    padding: 20px 25px 30px 25px;
+    gap: 18px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+
+/* For very small screens (max-width: 400px) */
+@media (max-width: 400px) {
+  .contact-container {
+    padding: 90px 20px;
+  }
+
+  .main-heading {
+    font-size: 22px;
+    text-align: start;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .form-textarea {
+    height: 150px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 0;
   }
 }

@@ -1,7 +1,8 @@
+/* ---------- NAVBAR MAIN ---------- */
 .navbar-forex {
   background: rgba(21, 39, 63, 1);
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   position: absolute;
   top: 0;
   left: 0;
@@ -9,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Koh Santepheap", sans-serif;
 }
 
 /* ---------- NAV CONTAINER ---------- */
@@ -55,7 +57,6 @@
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
-  font-family: "Koh Santepheap";
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -65,11 +66,20 @@
   transform: scale(1.03);
 }
 
-/* =========================================================
-   RESPONSIVENESS
-   ========================================================= */
+/* ---------- HAMBURGER ICON ---------- */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-/* --- Large Laptops --- */
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+
 @media (max-width: 1200px) {
   .navbar-container {
     padding: 18px 40px;
@@ -97,58 +107,75 @@
 @media (max-width: 768px) {
   .navbar-container {
     padding: 12px 20px;
-    gap: 10px;
   }
+
   .navbar-logo {
-    width: 160px;
+    width: 180px;
   }
+
+  /* Show hamburger icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide normal nav by default */
   .navbar-right {
-    gap: 8px;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    background: rgba(21, 39, 63, 0.98);
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
+
+  /* When menu is active */
+  .navbar-right.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav-btn {
-    font-size: 13px;
-    padding: 6px 14px;
+    width: 80%;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: transparent;
   }
 }
 
 /* --- Mobiles --- */
 @media (max-width: 600px) {
-  .navbar-forex {
-    height: auto;
-    /* padding: 40px 0; */
-  }
-
   .navbar-container {
-    flex-wrap: nowrap; /* keep in one line */
-    justify-content: space-between;
     padding: 10px 16px;
   }
 
   .navbar-logo {
-    width: 130px;
-  }
-
-  .navbar-right {
-    gap: 6px;
+    width: 180px;
   }
 
   .nav-btn {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 16px;
+    background-color: transparent;
   }
 }
 
 /* --- Very Small Screens --- */
 @media (max-width: 420px) {
   .navbar-logo {
-    width: 110px;
+    width: 160px;
   }
   .nav-btn {
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-  .navbar-right {
-    gap: 5px;
+    font-size: 16px;
+    padding: 8px 0;
+    background-color: transparent;
   }
 }
 
@@ -156,13 +183,12 @@
 @media (max-width: 350px) {
   .navbar-container {
     padding: 8px 10px;
-    gap: 6px;
   }
   .navbar-logo {
-    width: 95px;
+    width: 130px;
   }
   .nav-btn {
-    font-size: 10px;
-    padding: 4px 8px;
+    font-size: 14px;
+    background-color: transparent;
   }
 }

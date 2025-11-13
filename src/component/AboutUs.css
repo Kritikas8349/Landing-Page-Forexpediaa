@@ -207,6 +207,9 @@
   .about-section h2 {
     font-size: 24px;
   }
+  .about-hero-content{
+    text-align: start;
+  }
 }
 
 /* --- Tablets (max-width: 768px) --- */
@@ -249,6 +252,9 @@
 
   .about-cta p {
     font-size: 16px;
+  }
+  .about-hero-content{
+    text-align: start;
   }
 }
 
@@ -311,10 +317,16 @@
     font-size: 16px;
     padding: 10px 26px;
   }
+  .about-hero-content{
+    text-align: start;
+  }
 }
 
 /* --- Extra Small Screens (max-width: 400px) --- */
 @media (max-width: 400px) {
+  .about-hero-content{
+    text-align: start;
+  }
   .about-hero-title {
     font-size: 26px;
   }

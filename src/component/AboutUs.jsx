@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AboutUs.css";
-import { FaBusinessTime, FaBullseye, FaBrain, FaGlobe, FaCompass } from "react-icons/fa6";
 import { BsCheckCircleFill, BsLightningChargeFill, BsBarChartFill, BsPeopleFill } from "react-icons/bs";
-
+import ContactForm from "./ContactForm";
 const AboutUs = () => {
+
+
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+const openForm = () => setIsFormOpen(true);
+const closeForm = () => setIsFormOpen(false);
+
+
   return (
     <div className="aboutus-page">
       {/* ====== HERO SECTION ====== */}
@@ -121,10 +128,11 @@ const AboutUs = () => {
               Whether you’re starting your trading journey or managing a
               portfolio, <br />Forexpediaa gives you the tools and insights to succeed.
             </p>
-            <button className="hero-btn1">Start Your Free Trial</button>
+            <button className="hero-btn1" onClick={openForm}>Claim 5 Days Trail</button>
           </div>
         </div>
       </section>
+      {isFormOpen && <ContactForm onClose={closeForm} />}
     </div>
   );
 };

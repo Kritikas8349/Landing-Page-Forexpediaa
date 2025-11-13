@@ -8,6 +8,8 @@ import AboutUs from './component/AboutUs';
 import PrivacyPolicy from './component/PrivacyPolicy';
 import TermsConditions from './component/TermsConditions';
 import ContactUs from './component/ContactUS';
+import ScrollToTop from './component/ScrollToTop';
+import ContactForm from './component/ContactForm';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +18,7 @@ function App() {
     <Router>
      
       <NavbarForex />
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<ForexpediaaHero />} />
@@ -23,6 +26,8 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions/>} />
+        <Route path="/contact-form" element={<ContactForm/>} />
+
       </Routes>
 
       <Footer />

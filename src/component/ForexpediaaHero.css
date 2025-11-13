@@ -206,13 +206,16 @@
   margin-top: 0;
   padding: 0 20px;
   max-width: 100%;
+  text-align: start;
   }
   .hero-heading {
   font-size: 36px;
   line-height: 115%;
+  text-align: start;
   }
   .hero-subtext {
   font-size: 16px;
+  text-align: start;
   }
   .hero-btn {
   width: 210px;
@@ -229,10 +232,12 @@
   }
   .hero-heading {
   font-size: 30px;
+  text-align: start;
   }
   .hero-subtext {
   font-size: 15px;
   margin-bottom: 25px;
+  text-align: start;
   }
   .hero-btn {
   width: 190px;
@@ -247,9 +252,11 @@
   @media (max-width: 360px) {
   .hero-heading {
   font-size: 24px;
+  text-align: start;
   }
   .hero-subtext {
   font-size: 14px;
+  text-align: start;
   }
   .hero-btn {
   width: 180px;
