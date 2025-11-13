@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
-
+import { FaBusinessTime, FaBullseye, FaBrain, FaGlobe, FaCompass } from "react-icons/fa6";
+import { BsCheckCircleFill, BsLightningChargeFill, BsBarChartFill, BsPeopleFill } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
@@ -31,7 +32,7 @@ const AboutUs = () => {
 
           {/* Vision & Mission */}
           <div className="about-section">
-            <h2>💼 Our Vision</h2>
+            <h2> Our Vision</h2>
             <p>
               To redefine forex education and account management through
               certified research, risk discipline, and absolute transparency —
@@ -40,7 +41,7 @@ const AboutUs = () => {
           </div>
 
           <div className="about-section">
-            <h2>🎯 Our Mission</h2>
+            <h2> Our Mission</h2>
             <ul>
               <li>Real-time, risk-managed signals</li>
               <li>
@@ -56,10 +57,10 @@ const AboutUs = () => {
 
           {/* Core Values */}
           <div className="about-section">
-            <h2>🧠 Our Core Values</h2>
+            <h2>Our Core Values</h2>
             <div className="values-grid">
               <div className="value-card">
-                <h3>✅ Integrity Above All</h3>
+                <h3><BsCheckCircleFill className="value-icon" /> Integrity Above All</h3>
                 <p>
                   We never promise guaranteed profits. Instead, we provide
                   honest data, clear strategies, and full transparency so you
@@ -67,21 +68,21 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="value-card">
-                <h3>⚡ Certified Expertise</h3>
+                <h3><BsLightningChargeFill className="value-icon" /> Certified Expertise</h3>
                 <p>
                   Our analysts are trained under CFA, FRM, and CMT standards,
                   ensuring disciplined, research-based insights.
                 </p>
               </div>
               <div className="value-card">
-                <h3>📊 Data-Driven Analysis</h3>
+                <h3><BsBarChartFill className="value-icon" /> Data-Driven Analysis</h3>
                 <p>
                   Every recommendation is powered by technical and fundamental
                   data — tracking global trends and monetary policy shifts.
                 </p>
               </div>
               <div className="value-card">
-                <h3>🤝 Client-First Approach</h3>
+                <h3><BsPeopleFill className="value-icon" /> Client-First Approach</h3>
                 <p>
                   Your trust is our priority — from confidential consultations
                   to secure account handling, ethics and reliability guide us.
@@ -92,7 +93,7 @@ const AboutUs = () => {
 
           {/* Why Choose */}
           <div className="about-section">
-            <h2>🌐 Why Traders Choose Forexpediaa</h2>
+            <h2> Why Traders Choose Forexpediaa</h2>
             <ul className="why-list">
               <li>Certified Analysts with financial credentials</li>
               <li>Transparent Signals with clear SL/TP</li>
@@ -103,7 +104,7 @@ const AboutUs = () => {
 
           {/* Approach */}
           <div className="about-section">
-            <h2>🧭 Our Approach</h2>
+            <h2>Our Approach</h2>
             <p>
               We merge technical precision with economic intelligence to help
               traders navigate volatile markets confidently. Our analysts decode
@@ -115,10 +116,10 @@ const AboutUs = () => {
 
           {/* CTA */}
           <div className="about-cta">
-            <h2>🚀 Join the Forexpediaa Experience</h2>
+            <h2> Join the Forexpediaa Experience</h2>
             <p>
               Whether you’re starting your trading journey or managing a
-              portfolio, Forexpediaa gives you the tools and insights to succeed.
+              portfolio, <br />Forexpediaa gives you the tools and insights to succeed.
             </p>
             <button className="hero-btn1">Start Your Free Trial</button>
           </div>

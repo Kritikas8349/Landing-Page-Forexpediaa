@@ -7,6 +7,7 @@ import Footer from './component/Footer';
 import AboutUs from './component/AboutUs';
 import PrivacyPolicy from './component/PrivacyPolicy';
 import TermsConditions from './component/TermsConditions';
+import ContactUs from './component/ContactUS';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ForexpediaaHero />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions/>} />
       </Routes>
