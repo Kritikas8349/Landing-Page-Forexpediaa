@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdEmail, MdPhone } from "react-icons/md"; // ✅ React Icons
+import axios from "axios";
 import "./ContactUs.css";
 
 const ContactUs = () => {
@@ -10,56 +10,68 @@ const ContactUs = () => {
     message: "",
   });
 
+  const [status, setStatus] = useState("");
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Your WhatsApp number (country code, no "+" or spaces)
-    const phoneNumber = "9691043783"; // change this to your WhatsApp number
+    try {
+      await axios.post("http://localhost:5000/api/leads/submit", {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      });
 
-    // ✅ Construct WhatsApp message
-    const textMessage = `Hello, I’m ${formData.name} (${formData.email}).
-My contact number is ${formData.phone}.
-Message: ${formData.message}`;
+      setStatus("Message sent successfully!");
 
-    // ✅ Open WhatsApp chat
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      textMessage
-    )}`;
-    window.open(url, "_blank");
+      // Clear form after submit
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setStatus("Error sending message");
+    }
   };
 
   return (
     <div className="contact-container">
+      
+      {/* LEFT SIDE */}
       <div className="contact-left">
         <p className="help-text">WE’RE HERE TO HELP YOU</p>
+
         <h1 className="main-heading">
-        Discuss Your <br /> Trading & Forex Needs
+          Discuss Your <br /> Trading & Forex Needs
         </h1>
+
         <p className="description">
-        Have questions about our forex solutions, platforms, or services?
-    Get in touch — our expert team is ready to guide you toward smart,
-    secure, and profitable trading decisions.
+          Have questions about our forex solutions, platforms, or services?
+          Get in touch — our expert team is ready to guide you.
         </p>
 
         <div className="contact-info">
-          <div className="contact-item">
-            
-            <div>
-              <p className="label">E-mail: support@forexpediaa.com</p>
-              <p className="label">Website: www.forexpediaa.com</p>
-              <p className="label"> Follow us: Facebook | Instagram | LinkedIn | Twitter | YouTube</p>
-            </div>
-          </div>
+          <p className="label">E-mail: support@forexpediaa.com</p>
+          <p className="label">Website: www.forexpediaa.com</p>
         </div>
       </div>
 
+      {/* RIGHT SIDE - FORM */}
       <div className="contact-right">
         <form className="contact-form" onSubmit={handleSubmit}>
-            <h3>CONTACT US</h3>
+          <h3>CONTACT US</h3>
+
           <input
             type="text"
             name="name"
@@ -69,6 +81,7 @@ Message: ${formData.message}`;
             onChange={handleChange}
             required
           />
+
           <input
             type="email"
             name="email"
@@ -79,7 +92,6 @@ Message: ${formData.message}`;
             required
           />
 
-          {/* ✅ Phone number input */}
           <input
             type="tel"
             name="phone"
@@ -99,10 +111,11 @@ Message: ${formData.message}`;
             required
           ></textarea>
 
-<button type="submit" className="submit-btn">
-  Send Message
-</button>
+          <button type="submit" className="submit-btn">
+            Send Message
+          </button>
 
+          {status && <p className="form-status">{status}</p>}
         </form>
       </div>
     </div>
