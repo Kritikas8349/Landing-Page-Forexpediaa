@@ -22,11 +22,11 @@ const ContactForm = ({ onClose }) => {
 
     try {
       const res = await axios.post("http://localhost:5000/api/leads/submit", formData);
-      alert("Lead Saved Successfully!");
+      alert("Message Send Successfully!");
       console.log(res.data);
       onClose();
     } catch (error) {
-      alert("Error saving lead!");
+      alert("Error sending message!");
       console.log(error);
     }
   };

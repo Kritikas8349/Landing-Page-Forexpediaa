@@ -1,6 +1,5 @@
 const Lead = require("../models/leadModel");
 
-// POST Lead
 exports.createLead = async (req, res) => {
   try {
     const newLead = await Lead.create(req.body);
@@ -10,7 +9,6 @@ exports.createLead = async (req, res) => {
   }
 };
 
-// GET Leads
 exports.getLeads = async (req, res) => {
   try {
     const leads = await Lead.find();
