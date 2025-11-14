@@ -58,6 +58,7 @@
     font-size: 1rem;
     box-sizing: border-box;
     outline: none;
+    color: #000;
   }
   
   .contact-form-container form textarea {
@@ -75,7 +76,7 @@
   .contact-form-container form button {
     padding: 0.9rem 2rem;
     background: #007bff;
-    color: #fff;
+    color: #000;
     border: none;
     border-radius: 6px;
     cursor: pointer;
