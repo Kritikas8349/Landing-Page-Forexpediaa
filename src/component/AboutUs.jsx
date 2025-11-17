@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import "./AboutUs.css";
 import { BsCheckCircleFill, BsLightningChargeFill, BsBarChartFill, BsPeopleFill } from "react-icons/bs";
 import ContactForm from "./ContactForm";
+
 const AboutUs = () => {
-
-
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-const openForm = () => setIsFormOpen(true);
-const closeForm = () => setIsFormOpen(false);
-
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
 
   return (
     <div className="aboutus-page">
@@ -28,18 +26,22 @@ const closeForm = () => setIsFormOpen(false);
       {/* ====== MAIN CONTENT ====== */}
       <section className="about-content">
         <div className="about-container">
-          <p className="about-intro">
-            At <span>Forexpediaa</span>, we believe every trader — beginner or
-            professional — deserves access to accurate and transparent insights
-            grounded in real financial knowledge. Founded with a mission to
-            simplify global trading decisions, Forexpediaa combines{" "}
-            <b>data science, financial analysis,</b> and{" "}
-            <b>trading psychology</b> to help clients trade smarter, not harder.
-          </p>
+          {/* Intro with image */}
+          <div className="about-intro-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <p className="about-intro">
+              At <span>Forexpediaa</span>, we believe every trader — beginner or
+              professional — deserves access to accurate and transparent insights
+              grounded in real financial knowledge. Founded with a mission to
+              simplify global trading decisions, Forexpediaa combines{" "}
+              <b>data science, financial analysis,</b> and{" "}
+              <b>trading psychology</b> to help clients trade smarter, not harder.
+            </p>
+          </div>
 
           {/* Vision & Mission */}
           <div className="about-section">
-            <h2> Our Vision</h2>
+            <h2>Our Vision</h2>
+            <img src="vision.avif" alt="Vision"  />
             <p>
               To redefine forex education and account management through
               certified research, risk discipline, and absolute transparency —
@@ -48,7 +50,8 @@ const closeForm = () => setIsFormOpen(false);
           </div>
 
           <div className="about-section">
-            <h2> Our Mission</h2>
+            <h2>Our Mission</h2>
+            <img src="new3.avif" alt="Mission"  />
             <ul>
               <li>Real-time, risk-managed signals</li>
               <li>
@@ -65,6 +68,7 @@ const closeForm = () => setIsFormOpen(false);
           {/* Core Values */}
           <div className="about-section">
             <h2>Our Core Values</h2>
+            <img src="values.webp" alt="Core Values" />
             <div className="values-grid">
               <div className="value-card">
                 <h3><BsCheckCircleFill className="value-icon" /> Integrity Above All</h3>
@@ -100,7 +104,8 @@ const closeForm = () => setIsFormOpen(false);
 
           {/* Why Choose */}
           <div className="about-section">
-            <h2> Why Traders Choose Forexpediaa</h2>
+            <h2>Why Traders Choose Forexpediaa</h2>
+            
             <ul className="why-list">
               <li>Certified Analysts with financial credentials</li>
               <li>Transparent Signals with clear SL/TP</li>
@@ -112,6 +117,7 @@ const closeForm = () => setIsFormOpen(false);
           {/* Approach */}
           <div className="about-section">
             <h2>Our Approach</h2>
+            
             <p>
               We merge technical precision with economic intelligence to help
               traders navigate volatile markets confidently. Our analysts decode
@@ -123,7 +129,7 @@ const closeForm = () => setIsFormOpen(false);
 
           {/* CTA */}
           <div className="about-cta">
-            <h2> Join the Forexpediaa Experience</h2>
+            <h2>Join the Forexpediaa Experience</h2>
             <p>
               Whether you’re starting your trading journey or managing a
               portfolio, <br />Forexpediaa gives you the tools and insights to succeed.
@@ -132,6 +138,7 @@ const closeForm = () => setIsFormOpen(false);
           </div>
         </div>
       </section>
+
       {isFormOpen && <ContactForm onClose={closeForm} />}
     </div>
   );

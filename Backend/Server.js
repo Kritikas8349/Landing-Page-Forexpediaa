@@ -11,7 +11,7 @@ app.use(express.json());
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017/forexDB")
+  .connect("mongodb://127.0.0.1:27017/Forexpediaa")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 

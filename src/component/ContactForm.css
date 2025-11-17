@@ -1,151 +1,138 @@
-/* ---------- OVERLAY ---------- */
-.contact-form-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    padding: 1rem;
-    box-sizing: border-box;
+/* Overlay */
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 90, 90, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup card */
+.contact-popup {
+  width: 420px;
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 18px;
+  position: relative;
+  animation: popupFade 0.25s ease-in-out;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
   }
-  
-  /* ---------- FORM CONTAINER ---------- */
-  .contact-form-container {
-    background: #fff;
-    padding: 3rem;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .contact-form-container h2 {
-    color: #000;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  /* ---------- CLOSE BUTTON ---------- */
-  .close-btn {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: none;
-    border: none;
-    font-size: 1.7rem;
-    cursor: pointer;
-    color: #000;
-  }
-  
-  /* ---------- FORM INPUTS ---------- */
-  .contact-form-container form input,
-  .contact-form-container form textarea {
-    width: 100%;
-    margin-bottom: 1.2rem;
-    padding: 1rem 1rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background-color: #ebefee;
-    font-size: 1rem;
-    box-sizing: border-box;
-    outline: none;
-    color: #000;
-  }
-  
-  .contact-form-container form textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-  
-  .contact-form-container form input::placeholder,
-  .contact-form-container form textarea::placeholder {
-    color: #888;
-    padding-left: 0.2rem;
-  }
-  
-  /* ---------- BUTTON ---------- */
-  .contact-form-container form button {
-    padding: 0.9rem 2rem;
-    background: #007bff;
-    color: #000;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-    width: 100%;
-  }
-  
-  .contact-form-container form button:hover {
-    background: #0056b3;
-  }
-  
-  /* ---------- RESPONSIVENESS ---------- */
-  
-  /* For small phones (up to 480px) */
-  @media (max-width: 480px) {
-    .contact-form-container {
-      padding: 1.8rem;
-      border-radius: 10px;
-      max-width: 90%;
-    }
-  
-    .contact-form-container h2 {
-      font-size: 1.1rem;
-      text-align: start;
-    }
-  
-    .close-btn {
-      font-size: 1.4rem;
-    }
-  
-    .contact-form-container form input,
-    .contact-form-container form textarea {
-      font-size: 0.95rem;
-      padding: 0.8rem;
-    }
-  
-    .contact-form-container form button {
-      font-size: 0.95rem;
-      padding: 0.8rem 1.5rem;
-    }
-  }
-  
-  /* For tablets (481px to 768px) */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .contact-form-container {
-      padding: 2.5rem;
-      max-width: 420px;
-    }
-  
-    .contact-form-container h2 {
-      font-size: 1.6rem;
-    }
-  
-    .contact-form-container form input,
-    .contact-form-container form textarea {
-      font-size: 1rem;
-    }
-  }
-  
-  /* For large screens (above 1200px) */
-  @media (min-width: 1200px) {
-    .contact-form-container {
-      max-width: 550px;
-      padding: 3.5rem;
-    }
-  
-    .contact-form-container h2 {
-      font-size: 2rem;
-    }
-  }
-  
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Header */
+.popup-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+
+.popup-title span {
+  color: #8fe85c;
+}
+
+.popup-subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #037eee;
+}
+
+/* FORM OUTER BORDER */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 16px;
+  border: 1.5px solid #d7d7d7;
+  border-radius: 14px;
+  background: #ffffff;
+  margin-top: 5px;
+}
+
+/* Heading above each input */
+.input-heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000;
+  display: block;
+}
+
+
+
+/* Input & Select — SAME width + height for all */
+.floating-label input,
+.floating-label select {
+  width: 100%;
+  height: 48px; /* SAME HEIGHT */
+  padding: 12px 14px;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: #f7fbfc;
+  color: #000 !important;
+  box-sizing: border-box; /* ensures width stays same */
+}
+
+
+/* Success Box */
+.success-box {
+  text-align: center;
+}
+
+
+
+.whatsapp-btn {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #a4ea63;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}

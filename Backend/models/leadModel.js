@@ -4,7 +4,8 @@ const leadSchema = new mongoose.Schema({
   name: String,
   email: String,
   whatsapp: String,
-  country: String,
+  countryCode: String,
+  customCode: String,
   phone: String,
   message: String
 });

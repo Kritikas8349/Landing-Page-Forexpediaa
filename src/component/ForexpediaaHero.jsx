@@ -595,7 +595,7 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
       <div className="market-right">
         {/* 1 */}
         <div className="plan">
-          <img src="chooseus-1.png" alt="Essential Insight Plan" />
+          <img src="new4.avif" alt="Essential Insight Plan" />
           <div className="plan-info">
             <h4>Essential Insight Plan</h4>
             <p>
@@ -610,7 +610,7 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
 
         {/* 2 */}
         <div className="plan">
-          <img src="chooseus-2.png" alt="Professional Analyst Plan" />
+          <img src="new2.webp" alt="Professional Analyst Plan" />
           <div className="plan-info">
             <h4>Professional Analyst Plan</h4>
             <p>
@@ -625,7 +625,7 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
 
         {/* 3 */}
         <div className="plan">
-          <img src="chooseus-3.png" alt="Institutional Plan" />
+          <img src="new3.avif" alt="Institutional Plan" />
           <div className="plan-info">
             <h4>Institutional Plan</h4>
             <p>
