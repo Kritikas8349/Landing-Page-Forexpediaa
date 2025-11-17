@@ -60,7 +60,7 @@
 }
 
 .popup-title span {
-  color: #8fe85c;
+  color: #007bff;
 }
 
 .popup-subtitle {
@@ -235,3 +235,44 @@
     padding: 18px 16px;
   }
 }
+
+
+
+/* Row Flex Container */
+.row-flex {
+  display: flex;
+  gap: 10px; /* spacing between the two fields */
+  align-items: flex-start;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+/* Country Code smaller width */
+.country-code {
+  flex: 0 0 30%; /* smaller fixed width */
+}
+
+/* WhatsApp input takes remaining space */
+.whatsapp-number {
+  flex: 1;
+}
+
+/* Make select and input full width of their container */
+.country-code select,
+.whatsapp-number input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: responsive for very small screens */
+@media (max-width: 500px) {
+  .row-flex {
+    flex-direction: column;
+  }
+}
+
+
+.highlight1 {
+  color: #007bff; /* bright blue */
+  font-weight: 700; /* optional: make it bold */
+}
+

@@ -54,13 +54,21 @@ const ContactForm = ({ onClose }) => {
 
         {/* HEADER — NOW DYNAMIC */}
         <h2 className="popup-title">
-          {submitted ? "Thank You for Reaching Out!" : "Get in Touch With Us Today"}
-        </h2>
+  {submitted ? (
+    "Thank You for Reaching Out!"
+  ) : (
+    <>
+      Unlock Your <span className="highlight1">5-Day Free</span> Trial Now!
+    </>
+  )}
+</h2>
+
+
 
         <p className="popup-subtitle">
           {submitted
             ? "Connect with our team directly."
-            : "Fill out your details and our team will contact you shortly."}
+            : "You’re One Click Away from Experiencing It Free for 5 Days!"}
         </p>
 
         {/* SUCCESS SCREEN */}
@@ -109,18 +117,33 @@ const ContactForm = ({ onClose }) => {
               />
             </div>
 
-            {/* Country Code */}
-            <div className="floating-label">
-              <label className="input-heading">Country Code</label>
-              <select
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-              >
-                {countryCodes.map((c) => (
-                  <option key={c}>{c}</option>
-                ))}
-              </select>
+            {/* Horizontal row: Country Code + WhatsApp */}
+            <div className="row-flex">
+              {/* Country Code */}
+              <div className="floating-label country-code">
+                <label className="input-heading">Country Code</label>
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleChange}
+                >
+                  {countryCodes.map((c) => (
+                    <option key={c}>{c}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* WhatsApp */}
+              <div className="floating-label whatsapp-number">
+                <label className="input-heading">WhatsApp Number</label>
+                <input
+                  type="text"
+                  name="whatsapp"
+                  placeholder="Enter your whatsapp number"
+                  value={formData.whatsapp}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
 
             {/* Custom Code */}
@@ -137,18 +160,6 @@ const ContactForm = ({ onClose }) => {
                 />
               </div>
             )}
-
-            {/* WhatsApp */}
-            <div className="floating-label">
-              <label className="input-heading">WhatsApp Number</label>
-              <input
-                type="text"
-                name="whatsapp"
-                placeholder="Enter your whatsapp number"
-                value={formData.whatsapp}
-                onChange={handleChange}
-              />
-            </div>
 
             {/* Submit */}
             <button type="submit" className="submit-btn">

@@ -1,8 +1,20 @@
-const express = require("express");
-const router = express.Router();
-const { createLead, getLeads } = require("../controllers/leadController");
+const mongoose = require("mongoose");
 
-router.post("/submit", createLead);
-router.get("/", getLeads);
+const leadSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true },
 
-module.exports = router;
+    // Popup form
+    countryCode: { type: String },
+    customCode: { type: String },
+    whatsapp: { type: String },
+
+    // Contact Us form
+    phone: { type: String },
+    message: { type: String },
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("Lead", leadSchema);
