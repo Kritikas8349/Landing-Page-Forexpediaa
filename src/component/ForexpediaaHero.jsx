@@ -595,7 +595,7 @@ Our analysis incorporates FOMC meeting insights — understanding how U.S. monet
       <div className="market-right">
         {/* 1 */}
         <div className="plan">
-          <img src="new4.avif" alt="Essential Insight Plan" />
+          <img src="new8.avif" alt="Essential Insight Plan" />
           <div className="plan-info">
             <h4>Essential Insight Plan</h4>
             <p>
