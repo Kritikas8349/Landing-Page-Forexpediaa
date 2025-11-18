@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./ContactForm.css";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -21,7 +20,7 @@ const ContactForm = ({ onClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const finalCode =
@@ -29,41 +28,46 @@ const ContactForm = ({ onClose }) => {
         ? formData.customCode
         : formData.countryCode;
 
-    try {
-      await axios.post("http://localhost:5000/api/leads/submit", {
-        ...formData,
-        countryCode: finalCode,
-      });
+    // Google Apps Script Web App URL
+    const webAppURL =
+      "https://script.google.com/macros/s/AKfycbyrfWUSk_v6nSso-JIXuJ3FQGpXbK6iWbvA9jZeUOUiIqgg52mVhxGV0NYSCjBh7_kQVw/exec";
 
-      setSavedWhatsapp(formData.whatsapp);
-      setSubmitted(true);
-    } catch (error) {
-      alert("Error sending message!");
-      console.log(error);
-    }
+    // Send data via fetch (no-cors to bypass localhost CORS issue)
+    fetch(webAppURL, {
+      method: "POST",
+      mode: "no-cors", // Important for localhost testing
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        countryCode: finalCode,
+        whatsapp: formData.whatsapp,
+      }),
+    });
+
+    // Optimistically show success screen
+    setSavedWhatsapp(finalCode + formData.whatsapp);
+    setSubmitted(true);
   };
 
   return (
     <div className="contact-overlay">
       <div className="contact-popup">
-
-        {/* Close Button */}
         <button className="close-btn" onClick={onClose}>
           &times;
         </button>
 
-        {/* HEADER — NOW DYNAMIC */}
         <h2 className="popup-title">
-  {submitted ? (
-    "Thank You for Reaching Out!"
-  ) : (
-    <>
-      Unlock Your <span className="highlight1">5-Day Free</span> Trial Now!
-    </>
-  )}
-</h2>
-
-
+          {submitted ? (
+            "Thank You for Reaching Out!"
+          ) : (
+            <>
+              Unlock Your <span className="highlight1">5-Day Free</span> Trial Now!
+            </>
+          )}
+        </h2>
 
         <p className="popup-subtitle">
           {submitted
@@ -71,13 +75,11 @@ const ContactForm = ({ onClose }) => {
             : "You’re One Click Away from Experiencing It Free for 5 Days!"}
         </p>
 
-        {/* SUCCESS SCREEN */}
         {submitted ? (
           <div className="success-box">
-            {/* Show WhatsApp button only if number entered */}
             {savedWhatsapp.trim() !== "" && (
               <a
-                href={`https://wa.me/${savedWhatsapp}`}
+                href={`https://api.whatsapp.com/send?phone=${savedWhatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-btn"
@@ -88,10 +90,7 @@ const ContactForm = ({ onClose }) => {
             )}
           </div>
         ) : (
-          /* FORM SCREEN */
           <form className="form-card" onSubmit={handleSubmit}>
-
-            {/* Name */}
             <div className="floating-label">
               <label className="input-heading">Name</label>
               <input
@@ -104,22 +103,19 @@ const ContactForm = ({ onClose }) => {
               />
             </div>
 
-            {/* Email */}
             <div className="floating-label">
               <label className="input-heading">Email</label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter your mail"
+                placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
 
-            {/* Horizontal row: Country Code + WhatsApp */}
             <div className="row-flex">
-              {/* Country Code */}
               <div className="floating-label country-code">
                 <label className="input-heading">Country Code</label>
                 <select
@@ -133,20 +129,19 @@ const ContactForm = ({ onClose }) => {
                 </select>
               </div>
 
-              {/* WhatsApp */}
               <div className="floating-label whatsapp-number">
-                <label className="input-heading">WhatsApp Number</label>
+                <label className="input-heading">WhatsApp No.</label>
                 <input
                   type="text"
                   name="whatsapp"
-                  placeholder="Enter your whatsapp number"
+                  placeholder="Enter your WhatsApp number"
                   value={formData.whatsapp}
                   onChange={handleChange}
+                  required
                 />
               </div>
             </div>
 
-            {/* Custom Code */}
             {formData.countryCode === "Other" && (
               <div className="floating-label">
                 <label className="input-heading">Custom Code</label>
@@ -161,7 +156,6 @@ const ContactForm = ({ onClose }) => {
               </div>
             )}
 
-            {/* Submit */}
             <button type="submit" className="submit-btn">
               Submit
             </button>

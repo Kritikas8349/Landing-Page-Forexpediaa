@@ -7,7 +7,6 @@
   font-family: "Lexend", sans-serif;
   color: #000;
   flex-wrap: wrap;
-  
 }
 
 /* ---------- LEFT SECTION ---------- */
@@ -92,19 +91,18 @@
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  padding: 25px 40px 40px 40px; /* equal spacing inside form */
+  padding: 20px 40px 20px 40px;
   width: 100%;
   max-width: 480px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  min-height: 560px;
+  gap: 10px;
+  min-height: 500px;
   box-sizing: border-box;
   border: 1px solid black;
 }
 
-
-.contact-form h3{
+.contact-form h3 {
   color: #037eee;
   text-align: start;
 }
@@ -137,7 +135,7 @@
 
 .form-textarea {
   resize: none;
-  height: 180px; /* ✅ increased textarea height */
+  height: 180px;
 }
 
 .submit-btn {
@@ -162,8 +160,6 @@
 }
 
 /* ---------- RESPONSIVE DESIGN ---------- */
-
-/* For large tablets and small laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
   .contact-container {
     padding: 120px 80px;
@@ -183,7 +179,6 @@
   }
 }
 
-/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -200,12 +195,7 @@
   .help-text,
   .main-heading,
   .description {
-    text-align: center;
     text-align: start;
-  }
-
-  .description {
-    max-width: 100%;
   }
 
   .contact-info {
@@ -223,7 +213,6 @@
   }
 }
 
-/* For small tablets and large phones (max-width: 576px) */
 @media (max-width: 576px) {
   .contact-container {
     padding: 100px 30px;
@@ -231,19 +220,10 @@
 
   .main-heading {
     font-size: 26px;
-    line-height: 1.4;
-    text-align: start;
   }
 
   .description {
     font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .form-input,
-  .form-textarea {
-    font-size: 14px;
-    padding: 12px 14px;
   }
 
   .contact-form {
@@ -257,7 +237,6 @@
   }
 }
 
-/* For very small screens (max-width: 400px) */
 @media (max-width: 400px) {
   .contact-container {
     padding: 90px 20px;
@@ -265,16 +244,10 @@
 
   .main-heading {
     font-size: 22px;
-    text-align: start;
-  }
-
-  .description {
-    font-size: 15px;
   }
 
   .contact-form {
     padding: 20px;
-    gap: 15px;
   }
 
   .form-textarea {
@@ -287,8 +260,68 @@
   }
 }
 
+/* -----------------------------
+   FIX → COUNTRY CODE + PHONE SIDE BY SIDE ALWAYS
+------------------------------ */
 
-/* Thank You Box (Right Side After Submit) */
+.row-flex {
+  display: flex;
+  flex-direction: row !important;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.row-flex > .floating-label {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* FLOATING LABEL */
+.floating-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-heading {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-select:focus {
+  border-color: #007bff;
+}
+
+.phone-number input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.phone-number input:focus {
+  border-color: #007bff;
+}
+
+/* -----------------------------
+   THANK YOU BOX
+------------------------------ */
+
 .thank-you-box {
   background: #fff;
   width: 100%;
@@ -299,7 +332,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Main thank you title */
 .thank-title {
   font-size: 26px;
   font-weight: 700;
@@ -307,14 +339,12 @@
   margin-bottom: 10px;
 }
 
-/* Sub message */
 .thank-sub {
   font-size: 16px;
   color: #555;
   margin-bottom: 25px;
 }
 
-/* WhatsApp button under thank you */
 .thank-whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -339,113 +369,29 @@
   font-size: 20px;
 }
 
-
-/* ------------------------
-   Large tablets / small laptops (≤1024px)
-------------------------- */
+/* RESPONSIVE THANK YOU BOX */
 @media (max-width: 1024px) {
   .thank-you-box {
     padding: 35px 30px;
   }
-
-  .thank-title {
-    font-size: 24px;
-  }
-
-  .thank-sub {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-
-  .thank-whatsapp-btn {
-    font-size: 15px;
-    padding: 10px 18px;
-  }
-
-  .wa-icon {
-    font-size: 18px;
-  }
 }
 
-/* ------------------------
-   Tablets (≤768px)
-------------------------- */
 @media (max-width: 768px) {
   .thank-you-box {
     width: 100%;
     max-width: 420px;
     padding: 30px 25px;
   }
-
-  .thank-title {
-    font-size: 22px;
-  }
-
-  .thank-sub {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .thank-whatsapp-btn {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-
-  .wa-icon {
-    font-size: 18px;
-  }
 }
 
-/* ------------------------
-   Small tablets / large phones (≤576px)
-------------------------- */
 @media (max-width: 576px) {
   .thank-you-box {
     padding: 28px 20px;
   }
-
-  .thank-title {
-    font-size: 20px;
-  }
-
-  .thank-sub {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .thank-whatsapp-btn {
-    font-size: 14px;
-    padding: 10px 14px;
-  }
-
-  .wa-icon {
-    font-size: 16px;
-  }
 }
 
-/* ------------------------
-   Very small screens (≤400px)
-------------------------- */
 @media (max-width: 400px) {
   .thank-you-box {
     padding: 25px 15px;
-  }
-
-  .thank-title {
-    font-size: 18px;
-  }
-
-  .thank-sub {
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-
-  .thank-whatsapp-btn {
-    font-size: 13px;
-    padding: 8px 12px;
-  }
-
-  .wa-icon {
-    font-size: 15px;
   }
 }
